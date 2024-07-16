@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone_Version</title>
+    <link href="./amazon_logo.png" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/PATH/flag-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="pre-loader">
+
+    </div>
+    <header>
+        <div class="nav-bar">
+            <div class="nav-logo border">
+                <div class="inner-nav-logo"></div>
+            </div>
+            <div class="address border">
+                <p class="first-para">Deliver to</p>
+                <div class="map">
+                    <i class="fa-solid fa-location-dot mapu"></i>
+                    <p class="second-para">India</p>
+                </div>
+            </div>
+            <div class="search-bar ">
+              <select class="all-bar">
+                <option>All</option>
+              </select>
+                <input type="text" placeholder="Seach Amazon" class="search-val">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                </div>
+                <div class="flag-pick border">
+                    <img src="data:image/png;base64,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" alt="india">
+                    <select class="ind-flag">
+                        <option>IND</option>
+                    </select>
+                </div>
+            <div class="box-5 border">
+                <p>Hello,sign in</p>
+                <select class="account-bar">
+                    <option>Accounts & Lists</option>
+                </select>
+            </div>
+            <div class="box-6 border">
+                <p class="box-para-1">Returns</p>
+                <p class="box-para-2">&Orders</p>
+            </div>
+            <div class="box-7 border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="cart">Cart</p>
+            </div>
+        </div>
+        <div class="view-part">
+            <div class="vw-1">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="vw-2">
+<p>Today's Deals</p>
+<p>Customer Service</p>
+<p>Registry</p>
+<p>Gift Cards</p>
+<p>Sell</p>
+            </div>
+            <div class="vw-3">
+<p>Shop Great Deals Now</p>
+            </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="inner-hero">
+            <p>You are on amazon.com.You can also shop on Amazon India for millions of products with first local delivery.<a>Click here to go to amazon.in</a></p>
+        </div>
+    </div>
+    <div class="shop-portion">
+        <div class="shop">
+            <div class="shop-content">
+                <h2>Clothes</h2>
+                <div class="shop-images" style="background-image: url('./box1_image.jpg');">
+                </div>
+                <p style="margin-top: 20px; color:red;">See More</p>
+            </div>
+        </div>
+        <div class="shop"><div class="shop-content">
+            <h2>Health and Services</h2>
+            <div class="shop-images" style="background-image: url('./box2_image.jpg');">
+            </div>
+            <p style="margin-top: 20px;color:red;">See More</p>
+        </div></div>
+        <div class="shop">
+            <div class="shop-content">
+                <h2>Furnitures</h2>
+                <div class="shop-images" style="background-image: url('./box3_image.jpg');">
+                </div>
+                <p style="margin-top: 20px;color:red;">See More</p>
+            </div>
+        </div>
+        <div class="shop"><div class="shop-content">
+            <h2>Electronic Items</h2>
+            <div class="shop-images" style="background-image: url('./box4_image.jpg');">
+            </div>
+            <p style="margin-top: 20px;color:red;">See More</p>
+        </div></div>
+        <div class="shop">
+            <div class="shop-content">
+                <h2>MakeUp Kits</h2>
+                <div class="shop-images" style="background-image: url('./box5_image.jpg');">
+                </div>
+                <p style="margin-top: 20px;color:red;">See More</p>
+            </div>
+        </div>
+        <div class="shop"><div class="shop-content">
+            <h2>Pet Care </h2>
+            <div class="shop-images" style="background-image: url('./box6_image.jpg');">
+            </div>
+            <p style="margin-top: 20px;color:red;">See More</p>
+        </div></div>
+        <div class=" shop">
+            <div class="shop-content">
+                <h2>Stationary Products</h2>
+                <div class="shop-images" style="background-image: url('./box7_image.jpg');">
+                </div>
+                <p style="margin-top: 20px;color:red;">See More</p>
+            </div>
+        </div>
+        <div class="shop"><div class="shop-content">
+            <h2>Fashion Design</h2>
+            <div class="shop-images" style="background-image: url('./box8_image.jpg');">
+            </div>
+            <p style="margin-top: 20px;color:red;">See More</p>
+        </div></div>
+        <div class="shop shopsy"><div class="shop-content">
+            <p>See Personalized Recommendations</p>
+            <button>Sign in</button>
+            <p>New Customer?<a style="color:seagreen">Start here</a></p>
+        </div></div>
+    </div>
+    <footer>
+        <div class="foot-panel-1">
+Back to Top
+        </div>
+        <div class="foot-panel-2">
+<ul>
+    Get to Know Us
+    <a>Careers</a>
+    <a>Blogs</a>
+    <a>About Amazon</a>
+    <a>Amazon Devices</a>
+    <a>Amazon Science</a>
+</ul>
+<ul>
+   Make Money with us 
+   <a>Sell Products on Amazon</a>
+    <a>Sell on Amazon Business</a>
+    <a>Advertise your Products</a>
+    <a>Become an Affilate</a>
+    <a>Host on Amazon Hub</a>
+
+</ul>
+<ul>
+    Amazon Payment Products
+    <a>Amazon Buisness Cards</a>
+    <a>Shop with Points</a>
+    <a>Amazon Currency Converter</a>
+    
+</ul>
+<ul>
+    Let Us Help You
+    <a>Your Account</a>
+    <a>Your Orders</a>
+    <a>Help</a>
+    <a>Returns and Replacement</a>
+    <a>Amazon assistants</a>
+</ul>
+        </div>
+        <div class="foot-panel-3">
+<div class="foot-logo">
+
+</div>
+<div class="foot-lang foot-item">
+    <i class="fa-solid fa-globe"></i>
+    <p>English</p>
+</div>
+<div class="foot-currency foot-item">
+    <i class="fa-solid fa-indian-rupee-sign"></i>
+    <p>INR-Indian Rupee</p>
+</div>
+<div class="foot-country foot-item">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAeFBMVEXxWyUAaTT////xVhgAZCv1kXx6mX4AAF/29vgAAGGQkKzp6e/z8/bR0dx2dpjt7fLb2+TKytekpLuGhqVlZY8+PngtLXAoKG5LS4CxscXh4egGBmOamrSpqb5paY5fX4m/v88bG2gzM3MjI2wWFmdycpl+fqBSUoSLbLLhAAAB1UlEQVRoge2W646jIBSAXWZ3gQMIiDccppZWnfd/wzlmZrPbTJraiNk/fDEVm/YLAudSFJlMJpPJZDKZzP/g5UCKXwdSkCfQQuhnfr9ZLnzdtDG2Te1FYrl2HadtPNWxpbxzG+e/Te472vVGG8aUNj0++HRyx2PQUgoi8JJSQ+QuldzxZiEG50+GAT9wuDSb7BvkFW/QbAzxzBjm1xExDa9SyIfXCYglJDCrEMsCwUeYXocE8nGdI6vIEAawFvBGKra+z7hfbuiFGYFnkTlVvr2VCgeaCMUu1OyWu+kdl6HS+mRPJUCJN60rXKb36eGePpRfqcZFkBDs6ABxow2AQcQkve6VS9qTwXslznUAWBaAUJ+F8n4gDZU75YpfUaGtK2cH/RR7cHPpLH4nr1ztlJ8pMGHwBFYOlti2cQFXWWUGwYCek8jNMfLbZYlpl0XS5mtDxz8bOibbUDyK8t5R7B7996kgmm+DCHbLDb8X/nx/+P9NXFX6xLWm3PA95YY0KRfn2H8vFn2aYnFsmVvt002BDlO6Av1va2GStxYY/ws2RZc4z/GCTdGStCkiazs3frZzY/J27pOnG9HfB1L8PJDix4FkeZZneZZneZZneZZneZbf4wML+k3aziyzbgAAAABJRU5ErkJggg==" alt="india" style="height:20px">
+    <p>India</p>
+</div>
+        </div>
+        <div class="foot-panel-4">
+            <div class="first-part">
+                <a>Contions of Use</a>
+                <a>Privacy Policy</a>
+                <a>Your Ads</a> 
+                <a>Privacy Choices</a>
+            </div>
+            <div class="second-part">
+                &copy; 1996-2024, Amazon.com, Inc. or its affilates
+            </div>
+        </div>
+    </footer>
+    <script>
+        let loader=document.getElementById("pre-loader");
+        window.addEventListener("load",worky);
+        function worky(){
+            setInterval(function(){
+loader.style.display="none";
+            },1500);
+        }
+
+    </script>
+</body>
+</html>
